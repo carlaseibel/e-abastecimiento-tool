@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+  <h1 class="h3 mb-0"><i class="bi bi-speedometer2 me-2"></i>Dashboard de Fornecedores</h1>
+  <a href="/fornecedores/upload/" class="btn btn-primary btn-sm">
+    <i class="bi bi-upload me-1"></i>Importar CSV
+  </a>
+</div>
+
+<!-- Stats bar -->
+<div class="row g-3 mb-4">
+  <div class="col-6 col-md-3">
+    <div class="card text-center p-3">
+      <div class="fs-2 fw-bold text-primary">{{ stats.total }}</div>
+      <div class="text-muted small">Fornecedores</div>
+    </div>
+  </div>
+  <div class="col-6 col-md-3">
+    <div class="card text-center p-3">
+      <div class="fs-2 fw-bold text-danger">{{ stats.alto_critico }}</div>
+      <div class="text-muted small">Risco Alto / Crítico</div>
+    </div>
+  </div>
+  <div class="col-6 col-md-3">
+    <div class="card text-center p-3">
+      <div class="fs-2 fw-bold text-secondary">{{ stats.sem_score }}</div>
+      <div class="text-muted small">Sem Score</div>
+    </div>
+  </div>
+  <div class="col-6 col-md-3">
+    <div class="card text-center p-3">
+      <div class="fs-2 fw-bold text-warning">
+        {% if stats.score_medio %}{{ stats.score_medio|floatformat:1 }}{% else %}—{% endif %}
+      </div>
+      <div class="text-muted small">Score Médio</div>
+    </div>
+  </div>
+</div>
+
+<!-- Supplier cards -->
+{% if suppliers %}
+<div class="row g-3">
+  {% for supplier in suppliers %}
+  <div class="col-md-6 col-lg-4">
+    <div class="card h-100">
+      <div class="card-body">
+        <div class="d-flex justify-content-between align-items-start mb-2">
+          <div>
+            <h5 class="card-title mb-0">
+              <a href="/fornecedores/{{ supplier.pk }}/" class="text-decoration-none text-dark">
+                {{ supplier.nome }}
+              </a>
+            </h5>
+            <small class="text-muted">{{ supplier.cnpj }}</small>
+          </div>
+          {% if supplier.score_risco %}
+          <div class="score-circle bg-{{ supplier.score_badge_class }}">
+            {{ supplier.score_risco }}
+          </div>
+          {% endif %}
+        </div>
+
+        <span class="badge bg-secondary mb-2">{{ supplier.categoria }}</span>
+        {% if supplier.nivel_risco %}
+        <span class="badge bg-{{ supplier.score_badge_class }} risk-badge mb-2 ms-1">
+          {{ supplier.nivel_risco }}
+        </span>
+        {% endif %}
+
+        {% if supplier.resumo_ia %}
+        <p class="card-text small text-muted mt-2">{{ supplier.resumo_ia|truncatewords:20 }}</p>
+        {% else %}
+        <p class="card-text small text-muted mt-2 fst-italic">Score não calculado ainda.</p>
+        {% endif %}
+
+        <div class="d-flex gap-2 mt-3">
+          <a href="/fornecedores/{{ supplier.pk }}/" class="btn btn-outline-secondary btn-sm">
+            <i class="bi bi-eye me-1"></i>Detalhes
+          </a>
+          <span class="badge bg-light text-dark border align-self-center">
+            <i class="bi bi-receipt me-1"></i>{{ supplier.quote_count }} cotação(ões)
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% else %}
+<div class="text-center py-5 text-muted">
+  <i class="bi bi-inbox fs-1 d-block mb-3"></i>
+  <p>Nenhum fornecedor cadastrado ainda.</p>
+  <a href="/fornecedores/upload/" class="btn btn-primary">Importar CSV</a>
+  <a href="/fornecedores/novo/" class="btn btn-outline-primary ms-2">Cadastrar manualmente</a>
+</div>
+{% endif %}
+{% endblock %}

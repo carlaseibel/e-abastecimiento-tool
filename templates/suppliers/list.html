@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block title %}Fornecedores{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+  <h1 class="h3 mb-0">Fornecedores</h1>
+  <div class="d-flex gap-2">
+    <a href="/fornecedores/upload/" class="btn btn-outline-secondary btn-sm">
+      <i class="bi bi-upload me-1"></i>Importar CSV
+    </a>
+    <a href="/fornecedores/novo/" class="btn btn-primary btn-sm">
+      <i class="bi bi-plus-circle me-1"></i>Novo
+    </a>
+  </div>
+</div>
+
+<div class="card">
+  <div class="table-responsive">
+    <table class="table table-hover mb-0">
+      <thead class="table-light">
+        <tr>
+          <th>Nome</th>
+          <th>CNPJ</th>
+          <th>Categoria</th>
+          <th>Score de Risco</th>
+          <th>Nível</th>
+          <th>Cotações</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for supplier in suppliers %}
+        <tr>
+          <td><strong>{{ supplier.nome }}</strong></td>
+          <td class="text-muted">{{ supplier.cnpj }}</td>
+          <td><span class="badge bg-secondary">{{ supplier.categoria }}</span></td>
+          <td>
+            {% if supplier.score_risco %}
+              <strong>{{ supplier.score_risco }}</strong> / 10
+            {% else %}
+              <span class="text-muted">—</span>
+            {% endif %}
+          </td>
+          <td>
+            {% if supplier.nivel_risco %}
+            <span class="badge bg-{{ supplier.score_badge_class }}">{{ supplier.nivel_risco }}</span>
+            {% else %}
+            <span class="text-muted small">sem score</span>
+            {% endif %}
+          </td>
+          <td>{{ supplier.quote_count }}</td>
+          <td>
+            <a href="/fornecedores/{{ supplier.pk }}/" class="btn btn-sm btn-outline-secondary">
+              <i class="bi bi-eye"></i>
+            </a>
+          </td>
+        </tr>
+        {% empty %}
+        <tr><td colspan="7" class="text-center text-muted py-4">Nenhum fornecedor cadastrado.</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,144 @@
+{% extends "base.html" %}
+{% block title %}{{ supplier.nome }}{% endblock %}
+
+{% block content %}
+<div class="mb-3">
+  <a href="/fornecedores/" class="text-muted text-decoration-none small">
+    <i class="bi bi-arrow-left me-1"></i>Fornecedores
+  </a>
+</div>
+
+<div class="row g-4">
+  <!-- Supplier info -->
+  <div class="col-md-5">
+    <div class="card mb-3">
+      <div class="card-body">
+        <h2 class="h4 mb-1">{{ supplier.nome }}</h2>
+        <p class="text-muted mb-2">{{ supplier.cnpj }}</p>
+        <span class="badge bg-secondary">{{ supplier.categoria }}</span>
+        <hr>
+        <small class="text-muted">Cadastrado em {{ supplier.created_at|date:"d/m/Y" }}</small>
+      </div>
+    </div>
+
+    <!-- Risk Score card -->
+    <div class="card">
+      <div class="card-header d-flex justify-content-between align-items-center">
+        <strong><i class="bi bi-shield-exclamation me-2"></i>Score de Risco (IA)</strong>
+        <button
+          id="btn-score"
+          class="btn btn-sm btn-outline-primary"
+          onclick="triggerScore('{{ supplier.pk }}')"
+        >
+          <i class="bi bi-arrow-clockwise me-1"></i>
+          {% if supplier.score_risco %}Recalcular{% else %}Calcular Score{% endif %}
+        </button>
+      </div>
+      <div class="card-body" id="score-panel">
+        {% if supplier.score_risco %}
+          <div class="d-flex align-items-center gap-3 mb-3">
+            <div class="score-circle bg-{{ supplier.score_badge_class }}" style="width:64px;height:64px;font-size:1.4rem;">
+              {{ supplier.score_risco }}
+            </div>
+            <div>
+              <span class="badge bg-{{ supplier.score_badge_class }} fs-6">{{ supplier.nivel_risco }}</span>
+              <div class="small text-muted mt-1">Atualizado {{ supplier.scored_at|date:"d/m/Y H:i" }}</div>
+            </div>
+          </div>
+          <p class="mb-0 text-secondary">{{ supplier.resumo_ia }}</p>
+        {% else %}
+          <p class="text-muted mb-0">Score não calculado. Clique em "Calcular Score" para gerar via IA.</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <!-- Quotes -->
+  <div class="col-md-7">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h3 class="h5 mb-0"><i class="bi bi-receipt me-2"></i>Cotações</h3>
+      <a href="/cotacoes/nova/{{ supplier.pk }}/" class="btn btn-primary btn-sm">
+        <i class="bi bi-plus me-1"></i>Nova Cotação
+      </a>
+    </div>
+
+    {% if quotes %}
+    <div class="card">
+      <div class="table-responsive">
+        <table class="table table-hover mb-0 small">
+          <thead class="table-light">
+            <tr>
+              <th>Produto</th>
+              <th>Ofertado</th>
+              <th>Mercado (BQ)</th>
+              <th>Margem</th>
+              <th>Data</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for quote in quotes %}
+            <tr>
+              <td>{{ quote.produto }}</td>
+              <td>{{ quote.moeda }} {{ quote.preco_ofertado|floatformat:2 }}</td>
+              <td>
+                {% if quote.preco_mercado %}
+                  {{ quote.moeda }} {{ quote.preco_mercado|floatformat:2 }}
+                  <br><small class="text-muted" title="{{ quote.fonte_bq }}">
+                    <i class="bi bi-cloud-fill text-info"></i> BQ
+                  </small>
+                {% else %}—{% endif %}
+              </td>
+              <td>
+                {% if quote.margem_pct %}
+                  <span class="badge bg-{{ quote.margem_badge_class }}">
+                    {{ quote.margem_pct|floatformat:1 }}%
+                  </span>
+                {% else %}—{% endif %}
+              </td>
+              <td>{{ quote.data|date:"d/m/Y" }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+    {% else %}
+    <div class="text-center text-muted py-4 border rounded">
+      <i class="bi bi-receipt fs-3 d-block mb-2"></i>
+      Nenhuma cotação ainda.
+      <a href="/cotacoes/nova/{{ supplier.pk }}/" class="d-block mt-2">Adicionar primeira cotação</a>
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+function triggerScore(supplierPk) {
+  const btn = document.getElementById('btn-score');
+  const panel = document.getElementById('score-panel');
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spinner-border spinner-border-sm me-1"></span>Calculando...';
+
+  fetch(`/fornecedores/${supplierPk}/score/`, {
+    method: 'POST',
+    headers: {'X-CSRFToken': '{{ csrf_token }}'},
+  })
+  .then(r => r.json())
+  .then(data => {
+    if (data.ok) {
+      location.reload();
+    } else {
+      panel.innerHTML = `<div class="alert alert-danger mb-0">${data.error}</div>`;
+      btn.disabled = false;
+      btn.innerHTML = '<i class="bi bi-arrow-clockwise me-1"></i>Tentar novamente';
+    }
+  })
+  .catch(() => {
+    panel.innerHTML = '<div class="alert alert-danger mb-0">Erro de conexão.</div>';
+    btn.disabled = false;
+  });
+}
+</script>
+{% endblock %}

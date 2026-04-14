@@ -1,0 +1,5 @@
+Django==5.1.*
+anthropic==0.40.*
+python-decouple==3.8
+whitenoise==6.*
+google-cloud-bigquery==3.*

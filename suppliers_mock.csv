@@ -1,0 +1,101 @@
+nome,cnpj,categoria,score_risco,nivel_risco,resumo_ia
+Tech Solutions Ltda,11.222.333/0001-01,Eletrônicos,2.50,BAIXO,Fornecedor com histórico estável e entregas pontuais.
+Moda Brasil S.A.,11.222.333/0002-02,Moda,6.80,MÉDIO,Alguns atrasos registrados no último trimestre.
+Alimentos do Sul Ltda,11.222.333/0003-03,Alimentos,1.20,BAIXO,Excelente conformidade com normas sanitárias.
+Casa & Cia S.A.,11.222.333/0004-04,Casa,8.50,ALTO,Pendências fiscais identificadas em auditoria recente.
+Beleza Total Ltda,11.222.333/0005-05,Beleza,3.40,BAIXO,Fornecedor confiável com certificações válidas.
+Esporte Ativo S.A.,11.222.333/0006-06,Esportes,5.60,MÉDIO,Capacidade produtiva limitada em períodos de alta demanda.
+Global Eletrônicos Ltda,11.222.333/0007-07,Eletrônicos,9.10,CRÍTICO,Múltiplas irregularidades fiscais e contratuais detectadas.
+Fashion Group S.A.,11.222.333/0008-08,Moda,4.20,MÉDIO,Qualidade inconsistente em lotes recentes.
+NutriFood Ltda,11.222.333/0009-09,Alimentos,2.10,BAIXO,Boa rastreabilidade e controle de qualidade.
+HomeDecor S.A.,11.222.333/0010-10,Casa,7.30,ALTO,Reclamações frequentes sobre prazo de entrega.
+GlowBeauty Ltda,11.222.333/0011-11,Beleza,1.80,BAIXO,Certificações em dia e histórico sem ocorrências.
+RunFast S.A.,11.222.333/0012-12,Esportes,6.50,MÉDIO,Dependência de único fornecedor de matéria-prima.
+Micro Chips Ltda,11.222.333/0013-13,Eletrônicos,3.90,BAIXO,Entregas dentro do prazo na maioria dos pedidos.
+Estilo Único S.A.,11.222.333/0014-14,Moda,8.00,ALTO,Histórico de descumprimento contratual em 2024.
+Campo Verde Ltda,11.222.333/0015-15,Alimentos,1.50,BAIXO,Fornecedor orgânico certificado com excelente reputação.
+Conforto Casa S.A.,11.222.333/0016-16,Casa,5.00,MÉDIO,Qualidade média com potencial de melhoria.
+Essence Beleza Ltda,11.222.333/0017-17,Beleza,2.90,BAIXO,Produtos regularizados junto à ANVISA.
+Power Sports S.A.,11.222.333/0018-18,Esportes,7.70,ALTO,Problemas recorrentes de conformidade de produto.
+DigiTech Ltda,11.222.333/0019-19,Eletrônicos,4.60,MÉDIO,Suporte técnico pós-venda abaixo do esperado.
+Trend Moda S.A.,11.222.333/0020-20,Moda,3.10,BAIXO,Bom desempenho nas últimas auditorias.
+Sabores do Norte Ltda,11.222.333/0021-21,Alimentos,9.50,CRÍTICO,Interdição sanitária em unidade produtiva em 2025.
+Espaço Lar S.A.,11.222.333/0022-22,Casa,2.40,BAIXO,Fornecedor parceiro com contrato de longo prazo.
+Dermis Beleza Ltda,11.222.333/0023-23,Beleza,6.10,MÉDIO,Reclamações de clientes sobre prazo de validade.
+Sport Life S.A.,11.222.333/0024-24,Esportes,1.10,BAIXO,Líder de mercado com processos bem estruturados.
+Circuito Eletrônico Ltda,11.222.333/0025-25,Eletrônicos,8.80,ALTO,Capacidade financeira comprometida segundo relatório de crédito.
+Costura Fina S.A.,11.222.333/0026-26,Moda,5.30,MÉDIO,Histórico misto com melhorias recentes documentadas.
+Orgânico Vivo Ltda,11.222.333/0027-27,Alimentos,1.90,BAIXO,Totalmente rastreável do campo à entrega.
+Design Casa S.A.,11.222.333/0028-28,Casa,7.00,ALTO,Inconsistências em documentação fiscal.
+Vita Beleza Ltda,11.222.333/0029-29,Beleza,3.70,BAIXO,Sem ocorrências relevantes nos últimos 24 meses.
+Atlético Pro S.A.,11.222.333/0030-30,Esportes,6.20,MÉDIO,Variação de qualidade entre lotes detectada.
+Smart Eletrônicos Ltda,11.222.333/0031-31,Eletrônicos,2.80,BAIXO,Fornecedor homologado com auditorias regulares.
+Vogue Brasil S.A.,11.222.333/0032-32,Moda,9.30,CRÍTICO,Envolvido em processo judicial trabalhista de grande escala.
+Colheita Boa Ltda,11.222.333/0033-33,Alimentos,2.20,BAIXO,Fornecedor regional com excelente pontualidade.
+Aconchego Casa S.A.,11.222.333/0034-34,Casa,5.80,MÉDIO,Desempenho variável conforme período do ano.
+Bio Glow Ltda,11.222.333/0035-35,Beleza,1.30,BAIXO,Produtos 100% naturais com certificação ECOCERT.
+Maratona Sports S.A.,11.222.333/0036-36,Esportes,8.20,ALTO,Dificuldades operacionais após mudança de gestão.
+Pixel Tech Ltda,11.222.333/0037-37,Eletrônicos,4.00,MÉDIO,Conformidade satisfatória nas últimas entregas.
+Alfaiate Moderno S.A.,11.222.333/0038-38,Moda,3.60,BAIXO,Parcerias sólidas e sem histórico de litígios.
+Terra Fértil Ltda,11.222.333/0039-39,Alimentos,6.90,MÉDIO,Problemas pontuais de logística identificados.
+Studio Casa S.A.,11.222.333/0040-40,Casa,1.70,BAIXO,Alta satisfação dos clientes internos.
+Pure Skin Ltda,11.222.333/0041-41,Beleza,7.50,ALTO,Recall de produto em 2025 ainda em investigação.
+Champion Sports S.A.,11.222.333/0042-42,Esportes,2.60,BAIXO,Processos de qualidade certificados ISO 9001.
+Neon Eletrônicos Ltda,11.222.333/0043-43,Eletrônicos,5.40,MÉDIO,Histórico neutro com margem para melhorias.
+Silk Moda S.A.,11.222.333/0044-44,Moda,8.60,ALTO,Irregularidades trabalhistas em auditoria de 2025.
+Sabor Natural Ltda,11.222.333/0045-45,Alimentos,1.40,BAIXO,Excelente avaliação em todos os indicadores.
+Móveis & Arte S.A.,11.222.333/0046-46,Casa,6.40,MÉDIO,Atrasos frequentes em períodos de alta demanda.
+Zen Beleza Ltda,11.222.333/0047-47,Beleza,3.20,BAIXO,Sem pendências regulatórias ou fiscais.
+Pro Sports Ltda,11.222.333/0048-48,Esportes,9.00,CRÍTICO,Insolvência declarada e processo de recuperação judicial.
+VoltAmp Eletrônicos S.A.,11.222.333/0049-49,Eletrônicos,4.80,MÉDIO,Qualidade de produto consistente com leve variação de prazo.
+Urban Fashion Ltda,11.222.333/0050-50,Moda,2.30,BAIXO,Boas práticas trabalhistas e ambientais comprovadas.
+Grão & Grão S.A.,11.222.333/0051-51,Alimentos,7.10,ALTO,Problemas com certificação sanitária em renovação.
+Harmonia Casa Ltda,11.222.333/0052-52,Casa,3.50,BAIXO,Fornecedor consolidado com histórico exemplar.
+Color Beleza S.A.,11.222.333/0053-53,Beleza,5.70,MÉDIO,Alguns produtos com prazo de validade reduzido.
+Extreme Sports Ltda,11.222.333/0054-54,Esportes,2.00,BAIXO,Alta performance em entregas e suporte.
+TechBase Eletrônicos S.A.,11.222.333/0055-55,Eletrônicos,8.30,ALTO,Problemas de conformidade técnica em lote recente.
+Prêt-à-Porter S.A.,11.222.333/0056-56,Moda,6.60,MÉDIO,Fornecedor em transição de gestão operacional.
+Hortifruti Premium Ltda,11.222.333/0057-57,Alimentos,1.60,BAIXO,Certificação orgânica e rastreabilidade completa.
+Decora Fácil S.A.,11.222.333/0058-58,Casa,7.90,ALTO,Litígio em curso com cliente anterior sobre qualidade.
+Glow Lab Ltda,11.222.333/0059-59,Beleza,4.30,MÉDIO,Desempenho mediano com melhoria nos últimos meses.
+Sportmax S.A.,11.222.333/0060-60,Esportes,3.00,BAIXO,Fornecedor certificado com processos padronizados.
+InovaTech Ltda,11.222.333/0061-61,Eletrônicos,5.20,MÉDIO,Inovação tecnológica com processos ainda em maturação.
+Moda Viva S.A.,11.222.333/0062-62,Moda,1.00,BAIXO,Melhor avaliação geral entre fornecedores de moda.
+Vitafrut Ltda,11.222.333/0063-63,Alimentos,8.70,ALTO,Autuação da vigilância sanitária em 2026.
+Lar Doce Lar S.A.,11.222.333/0064-64,Casa,4.50,MÉDIO,Desempenho estável com oportunidades de melhoria.
+Nativa Beleza Ltda,11.222.333/0065-65,Beleza,2.70,BAIXO,Fornecedor sustentável com certificação B Corp.
+Fitness Pro S.A.,11.222.333/0066-66,Esportes,6.30,MÉDIO,Capacidade limitada para grandes volumes.
+ByteWave Eletrônicos Ltda,11.222.333/0067-67,Eletrônicos,9.70,CRÍTICO,Fraude fiscal confirmada por autoridades em 2026.
+Studio Moda S.A.,11.222.333/0068-68,Moda,3.80,BAIXO,Fornecedor parceiro com bom relacionamento comercial.
+Fazenda Feliz Ltda,11.222.333/0069-69,Alimentos,2.50,BAIXO,Produção familiar certificada com alto padrão.
+Casa Completa S.A.,11.222.333/0070-70,Casa,7.60,ALTO,Reclamações sobre durabilidade dos produtos fornecidos.
+Aqua Beleza Ltda,11.222.333/0071-71,Beleza,5.10,MÉDIO,Linha de produtos em expansão com qualidade variável.
+Arena Sports S.A.,11.222.333/0072-72,Esportes,1.50,BAIXO,Reconhecido como melhor fornecedor do setor em 2025.
+CircuitPro Eletrônicos Ltda,11.222.333/0073-73,Eletrônicos,4.90,MÉDIO,Adequado para contratos de médio porte.
+Haute Couture S.A.,11.222.333/0074-74,Moda,8.10,ALTO,Histórico de descumprimento de prazos contratuais.
+Verde Campo Ltda,11.222.333/0075-75,Alimentos,3.30,BAIXO,Boas práticas agrícolas com certificação GAP.
+Estilo & Vida S.A.,11.222.333/0076-76,Casa,6.70,MÉDIO,Qualidade aceitável com histórico de negociações difíceis.
+Serenity Beleza Ltda,11.222.333/0077-77,Beleza,2.10,BAIXO,Excelente conformidade regulatória e rastreabilidade.
+Sport Vision S.A.,11.222.333/0078-78,Esportes,7.20,ALTO,Problemas de estoque que afetaram entregas em 2025.
+TechStar Eletrônicos Ltda,11.222.333/0079-79,Eletrônicos,3.40,BAIXO,Fornecedor de confiança para componentes críticos.
+Elegance Moda S.A.,11.222.333/0080-80,Moda,5.90,MÉDIO,Desempenho médio com plano de melhoria em andamento.
+Sabor do Campo Ltda,11.222.333/0081-81,Alimentos,1.80,BAIXO,Fornecedor local com excelente rastreabilidade.
+Casa & Estilo S.A.,11.222.333/0082-82,Casa,9.20,CRÍTICO,Falência decretada e contratos em risco de rescisão.
+Lumina Beleza Ltda,11.222.333/0083-83,Beleza,4.70,MÉDIO,Histórico neutro sem grandes ocorrências.
+Olimpo Sports S.A.,11.222.333/0084-84,Esportes,2.90,BAIXO,Fornecedor premiado por qualidade e pontualidade.
+CoreTech Eletrônicos Ltda,11.222.333/0085-85,Eletrônicos,6.00,MÉDIO,Atende requisitos mínimos com espaço para otimização.
+Boulevard Moda S.A.,11.222.333/0086-86,Moda,8.40,ALTO,Autuação trabalhista de grande repercussão em 2025.
+Primor Alimentos Ltda,11.222.333/0087-87,Alimentos,3.60,BAIXO,Processos auditados e certificados anualmente.
+Vivaz Casa S.A.,11.222.333/0088-88,Casa,5.50,MÉDIO,Fornecedor em processo de certificação ISO.
+Fresh Beleza Ltda,11.222.333/0089-89,Beleza,1.90,BAIXO,Altamente recomendado por auditorias independentes.
+Trail Sports S.A.,11.222.333/0090-90,Esportes,7.80,ALTO,Irregularidades em documentação de importação.
+Quantum Eletrônicos Ltda,11.222.333/0091-91,Eletrônicos,4.10,MÉDIO,Bom custo-benefício com qualidade satisfatória.
+Rio Moda S.A.,11.222.333/0092-92,Moda,2.60,BAIXO,Fornecedor estratégico com contrato plurianual.
+Safra Alimentos Ltda,11.222.333/0093-93,Alimentos,9.80,CRÍTICO,Contaminação detectada em lote e produto recolhido.
+Haus Design S.A.,11.222.333/0094-94,Casa,3.10,BAIXO,Fornecedor de alto padrão com baixo risco operacional.
+Belle Naturelle Ltda,11.222.333/0095-95,Beleza,6.80,MÉDIO,Dependência de matéria-prima importada com risco cambial.
+Podium Sports S.A.,11.222.333/0096-96,Esportes,2.40,BAIXO,Certificado ISO 9001 e sem ocorrências relevantes.
+NexTech Eletrônicos Ltda,11.222.333/0097-97,Eletrônicos,8.90,ALTO,Dívidas tributárias em aberto segundo Receita Federal.
+Signature Moda S.A.,11.222.333/0098-98,Moda,5.00,MÉDIO,Fornecedor em reestruturação com desempenho instável.
+Colheita Viva Ltda,11.222.333/0099-99,Alimentos,1.30,BAIXO,Melhor fornecedor de alimentos em avaliação anual.
+Prime Casa S.A.,11.222.333/0100-00,Casa,4.40,MÉDIO,Bom histórico com oportunidade de melhoria em prazos.

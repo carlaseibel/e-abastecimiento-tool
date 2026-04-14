@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}Importar Fornecedores{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-md-7">
+    <div class="card mb-3">
+      <div class="card-header"><strong><i class="bi bi-upload me-2"></i>Importar Fornecedores via CSV</strong></div>
+      <div class="card-body">
+        <form method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+          <div class="mb-3">
+            <label class="form-label fw-semibold">{{ form.arquivo.label }}</label>
+            {{ form.arquivo }}
+            <div class="form-text">{{ form.arquivo.help_text }}</div>
+          </div>
+          <button type="submit" class="btn btn-primary">
+            <i class="bi bi-upload me-1"></i>Importar
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="card bg-light border-0">
+      <div class="card-body small">
+        <strong>Formato esperado do CSV:</strong>
+        <pre class="mt-2 mb-0">nome,cnpj,categoria
+Fornecedor ABC,12.345.678/0001-99,Eletrônicos
+Moda Supplier LTDA,98.765.432/0001-11,Moda</pre>
+        <div class="mt-2 text-muted">
+          Categorias válidas: Eletrônicos, Moda, Alimentos, Casa, Beleza, Esportes, Outros
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
