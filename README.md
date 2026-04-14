@@ -1,6 +1,7 @@
 # e-Abastecimento Tool
 
 Portal de procurement para negociação com fornecedores, desenvolvido em Django com integração de IA (Claude) e BigQuery.
+<img width="1231" height="618" alt="Screenshot 2026-04-14 162049" src="https://github.com/user-attachments/assets/b94f8d26-b212-4f94-9e9a-5f1098a6f908" />
 
 ---
 
